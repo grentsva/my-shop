@@ -71,7 +71,7 @@ Brand.belongsToMany(Type, { through: TypeBrand });
 Item.hasMany(CartItem);
 CartItem.belongsTo(Item);
 
-Item.hasMany(ItemInfo);
+Item.hasMany(ItemInfo, { as: 'info' });
 ItemInfo.belongsTo(Item);
 
 Item.hasMany(Rating);
